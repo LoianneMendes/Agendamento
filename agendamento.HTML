@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Agendamento</title>
+        <link rel="icon" href="./img/logo.png" alt= "logo Naf">
+        <link rel="stylesheet" href="agendamento.css">
+        <link rel="stylesheet" href="styles.css">
+        <link rel="stylesheet" href="header.css">
+        <link rel="stylesheet" href="footer.css">
+    
+        <header>
+            <div class="img_slogan">
+                <img src="./img/logo.png" alt="logo Naf">
+            </div>
+            <nav>
+                <ul class="menu_links_header ">
+                    <li><a href="./index.html">Início</a></li>
+                    <li><a href="./agendamento.html">Agendamentos</a></li>
+                    <li><a href="./cadastro.html">Cadastro</a></li>
+                    <li><a href="./Avalie.html">Avalie</a></li>
+                    <li><a href="./sobre.html">Sobre</a></li>
+                </ul>
+            </nav>
+        </header>
+    </head>
+    <title>Agendamento NAF - Unifeso</title>
+    
+</head>
+<body>
+    <div class="container">
+            <img src="img/favicon.png"><h1>Agendamento NAF - Unifeso</h1>
+        <form id="agendamentoForm">
+            <div class="form-container" id="formAgendamento">
+            <label for="data">Data:</label>
+            <input type="date" id="data" name="data" required>
+            <label for="horario">Horário:</label>
+            <select id="horario" name="horario" required>
+                <option value="09:00">09:00</option>
+                <option value="10:00">10:00</option>
+                <option value="11:00">11:00</option>
+                <option value="14:00">14:00</option>
+                <option value="15:00">15:00</option>
+                <option value="16:00">16:00</option>
+            </select>
+            <label for="nome">Nome:</label>
+            <input type="text" id="nome" name="nome" required>
+            <label for="email">E-mail:</label>
+            <input type="email" id="email" name="email" required>
+            <button type="submit"href="confirmacao.html">Agendar </button> 
+            
+        </form>
+    </div>
+        
+        <div class="agendamentos">
+            <h2></h2>
+            <ul id="listaAgendamentos">
+                <!-- Os agendamentos serão exibidos aqui -->
+            </ul>
+        </div>
+    </div>
+
+</main>
+<footer>
+
+    <div class="footer-container">
+        <div class="contact-info">
+            <h3>Contato</h3>
+            <p>Email: suporte.naf@outlook.com</p>
+            <p>Telefone: (21) 2641-7000</p>
+            <p>Endereço: Avenida Alberto Torres, 111 - Alto</p>
+
+            <h3>Siga-nos</h3>
+            <p>Facebook: Unifeso</p>
+            <p>Instagram: @Unifeso</p>
+            <p>X: /Unifeso</p>
+        </div>
+        <div class="links">
+            <h3></h3>
+            <ul>
+                <li><a href="./index.html">Inicio</a></li>
+                <li><a href="./sobre.html">Sobre</a></li>
+                <li><a href="Avalie.html">Avalie</a></li>
+
+            </ul>
+        </div>
+        <div class="newsletter">
+            <h3>Inscreva-se para receber nossas novidades!</h3>
+            <form class="form_footer" action="#">
+                <input class="email_footer" type="email" placeholder="Seu e-mail">
+                <button type="submit">Inscrever</button>
+            </form>
+        </div>
+    </div>
+    <p>© 2024 MVP AgendaFácil NAF Tere. Todos os direitos reservados.</p>
+</footer>
+ <script>
+    const agendarBtn = document.getElementById("agendarBtn");
+    const formAgendamento = document.getElementById("formAgendamento");
+
+    agendarBtn.onclick = function() {
+        formAgendamento.style.display = formAgendamento.style.display === "none" || formAgendamento.style.display === "" ? "block" : "none";
+    };
+</script>
+</body>
+</html>
